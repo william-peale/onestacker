@@ -1444,17 +1444,17 @@ Wire Wire Line
 Text GLabel 6200 5000 2    50   Input ~ 0
 ISOMOD
 Text GLabel 6550 4900 2    50   Input ~ 0
-CSB(IMA)
+IA_N
 Text GLabel 6950 4800 2    50   Input ~ 0
-SCK(IPA)
+IA_P
 Wire Wire Line
 	6200 4900 6550 4900
 Wire Wire Line
 	6200 4800 6950 4800
 Text GLabel 6600 4300 2    50   BiDi ~ 0
-IPA
-Text GLabel 6200 4200 2    50   BiDi ~ 0
-IPB
+IB_N
+Text GLabel 6450 4200 2    50   BiDi ~ 0
+IB_P
 $Comp
 L device:R_Small R51
 U 1 1 5B82046A
@@ -1511,9 +1511,9 @@ Wire Wire Line
 Wire Wire Line
 	6200 4700 8150 4700
 Text GLabel 8150 4800 0    50   Output ~ 0
-CSB(IMA)
+IA_N
 Text GLabel 8150 4500 0    50   Output ~ 0
-SCK(IPA)
+IA_P
 $Comp
 L power:GND #PWR0106
 U 1 1 5B85915B
@@ -1537,9 +1537,9 @@ F 3 "~" H 10150 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 7600 2750 0    50   BiDi ~ 0
-IPB
+IB_P
 Text GLabel 7600 2850 0    50   BiDi ~ 0
-IPA
+IB_N
 $Comp
 L conn:Conn_01x02 J3
 U 1 1 5B85ACA7
@@ -1576,9 +1576,9 @@ $EndComp
 Wire Wire Line
 	7600 2850 7600 2900
 Text GLabel 6550 3300 0    50   Output ~ 0
-SCK(IPA)
+IA_P
 Text GLabel 6550 3450 0    50   Output ~ 0
-CSB(IMA)
+IA_N
 $Comp
 L conn:Conn_01x03 J5
 U 1 1 5B666A48
@@ -1606,15 +1606,9 @@ Wire Wire Line
 Wire Wire Line
 	7050 3300 7050 2950
 Wire Wire Line
-	7750 3500 7750 4000
-Wire Wire Line
 	7150 2950 7150 3300
 Wire Wire Line
 	7150 3300 8000 3300
-Wire Wire Line
-	7650 4000 7650 3450
-Wire Wire Line
-	7750 3500 8000 3500
 $Comp
 L device:R_Small R55
 U 1 1 5B6A0D08
@@ -1983,8 +1977,6 @@ F 3 "" H 9700 3700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6550 3450 7650 3450
-Wire Wire Line
 	7600 2750 7600 2700
 Wire Wire Line
 	7600 2700 8000 2700
@@ -1992,4 +1984,117 @@ Connection ~ 8000 2700
 Wire Wire Line
 	7600 2900 8000 2900
 Connection ~ 8000 2900
+$Comp
+L conn:Conn_01x13 J8
+U 1 1 5BA07629
+P 700 4050
+F 0 "J8" H 620 3225 50  0000 C CNN
+F 1 "Conn_01x13" H 620 3316 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-13-3.5-H_1x13_P3.50mm_Horizontal" H 700 4050 50  0001 C CNN
+F 3 "~" H 700 4050 50  0001 C CNN
+	1    700  4050
+	-1   0    0    1   
+$EndComp
+Text Label 6600 3300 0    50   ~ 0
+IA_P
+Text Label 6600 3450 0    50   ~ 0
+IA_N
+Text Label 8000 3200 0    50   ~ 0
+IA2_P
+Text Label 8000 3600 0    50   ~ 0
+IA2_N
+Wire Wire Line
+	6200 4200 6450 4200
+Text Label 6200 4300 0    50   ~ 0
+IB_N
+Text Label 6200 4200 0    50   ~ 0
+IB_P
+Text Label 8400 3000 2    50   ~ 0
+IB_N
+Text Label 8400 2600 0    50   ~ 0
+IB_P
+Text Label 9600 2600 0    50   ~ 0
+OA_P
+Text Label 9600 3000 0    50   ~ 0
+OA_N
+Text Label 9600 3200 0    50   ~ 0
+OB_P
+Text Label 9600 3600 0    50   ~ 0
+OB_N
+Wire Wire Line
+	7650 3500 7650 4000
+Wire Wire Line
+	7650 3500 8000 3500
+Wire Wire Line
+	7750 3450 7750 4000
+Wire Wire Line
+	6550 3450 7750 3450
+Wire Wire Line
+	7700 6100 7700 5850
+Wire Wire Line
+	7850 6100 7850 5850
+Wire Wire Line
+	8000 6100 8000 5850
+Wire Wire Line
+	8150 6100 8150 5850
+Text Label 7700 6050 1    50   ~ 0
+MOUNT1
+Text Label 7850 6050 1    50   ~ 0
+MOUNT2
+Text Label 8000 6050 1    50   ~ 0
+MOUNT3
+Text Label 8150 6050 1    50   ~ 0
+MOUNT4
+Text GLabel 7700 6100 3    50   Input ~ 0
+MOUNT1
+Text GLabel 7850 6100 3    50   Input ~ 0
+MOUNT2
+Text GLabel 8000 6100 3    50   Input ~ 0
+MOUNT3
+Text GLabel 8150 6100 3    50   Input ~ 0
+MOUNT4
+$Comp
+L conn:Conn_01x01 J9
+U 1 1 5B74D81F
+P 7700 5650
+F 0 "J9" V 7666 5562 50  0000 R CNN
+F 1 "Conn_01x01" V 7575 5562 50  0000 R CNN
+F 2 "Connectors:1pin" H 7700 5650 50  0001 C CNN
+F 3 "~" H 7700 5650 50  0001 C CNN
+	1    7700 5650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L conn:Conn_01x01 J10
+U 1 1 5B74DBBA
+P 7850 5650
+F 0 "J10" V 7816 5562 50  0000 R CNN
+F 1 "Conn_01x01" V 7725 5562 50  0000 R CNN
+F 2 "Connectors:1pin" H 7850 5650 50  0001 C CNN
+F 3 "~" H 7850 5650 50  0001 C CNN
+	1    7850 5650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L conn:Conn_01x01 J11
+U 1 1 5B74DC9C
+P 8000 5650
+F 0 "J11" V 7966 5562 50  0000 R CNN
+F 1 "Conn_01x01" V 7875 5562 50  0000 R CNN
+F 2 "Connectors:1pin" H 8000 5650 50  0001 C CNN
+F 3 "~" H 8000 5650 50  0001 C CNN
+	1    8000 5650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L conn:Conn_01x01 J12
+U 1 1 5B74DD7A
+P 8150 5650
+F 0 "J12" V 8116 5562 50  0000 R CNN
+F 1 "Conn_01x01" V 8025 5562 50  0000 R CNN
+F 2 "Connectors:1pin" H 8150 5650 50  0001 C CNN
+F 3 "~" H 8150 5650 50  0001 C CNN
+	1    8150 5650
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
